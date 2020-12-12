@@ -72,19 +72,21 @@
 <!--		<div id="seumap" onmousewheel="return bbimg(this)"><img id="img" border="0" src="img/map.jpg" usemap="#Map3" /></div>-->
   <div class="container">
 		<div class="row">
-			
-			<div id="seumap" onmousewheel="return bbimg(this)">
-			<img id="img" src="img/map.jpg" class="img-responsive img-circle" usemap="#Map3"/>
+		  <div class="pad">
+			<div id="seumap" onmousewheel="return bbimg(this)" class="bg-gray area-scroll">
+			<img id="img" src="img/seumap_match.png" class="img-responsive img-rectangle" usemap="#Map3"/>
+				<map name="Map3">
+				  <area shape="rect" coords="390,322,510,412" href="#about"  title="李文正图书馆">
+				  <area shape="rect" coords="95,343,228,439" href="#service" title="橘园">
+				  <area shape="rect" coords="657,422,773,482" href="#service" title="桃园">
+				</map>
 			</div>
+		  </div>
 		</div>
 		
 		  
 	</div>
-	<map name="Map3">
-	  <area shape="rect" coords="498,316,618,406" href="#about"  title="李文正图书馆">
-	  <area shape="rect" coords="177,343,310,439" href="test.html" target="_blank" title="2">
-	  <area shape="rect" coords="769,428,885,488" href="test.html" target="_blank" title="3">
-    </map>
+	
 	
 	
 <!--
@@ -186,7 +188,6 @@
 	
 
 	<!-- Section: services -->
-<!--
     <section id="service" class="home-section text-center bg-gray">
 		
 		<div class="heading-about">
@@ -266,7 +267,6 @@
         </div>		
 		</div>
 	</section>
--->
 	<!-- /Section: services -->
 	
 
