@@ -389,6 +389,11 @@ hr {
 	margin-bottom: 10px;
 }
 
+.team p.content {
+	text-align: left;
+	word-break: normal;
+}
+
 .avatar {
 	margin-bottom: 20px;
 }

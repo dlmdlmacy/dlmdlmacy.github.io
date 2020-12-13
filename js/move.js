@@ -10,12 +10,12 @@ var params = {
   function bbimg(o){
     var o=o.getElementsByTagName("img")[0];
     params.zoomVal+=event.wheelDelta/1200;
-    if (params.zoomVal >= 0.2) {
+    if (params.zoomVal >= 1) {
       o.style.transform="scale("+params.zoomVal+")";
 		event.stopPropagation();
 		event.preventDefault();
     } else {
-      params.zoomVal=0.2;
+      params.zoomVal=1;
       o.style.transform="scale("+params.zoomVal+")";
       return false;
     }
@@ -60,8 +60,15 @@ var params = {
       if(params.flag){
         var nowX = e.clientX, nowY = e.clientY;
         var disX = nowX - params.currentX, disY = nowY - params.currentY;
-        target.style.left = parseInt(params.left) + disX+ "px";
+		  
+//		if( (parseInt(params.left) + disX) <0 && (parseInt(params.top) + disY) <0 && (parseInt(params.bottom) + disY) >target.naturalHeight && (parseInt(params.right) + disX) >target.style.naturalWidth){
+		
+		target.style.left = parseInt(params.left) + disX+ "px";
         target.style.top = parseInt(params.top) + disY+ "px";
+		  
+//		}
+        
+		  
         if (typeof callback == "function") {
           callback((parseInt(params.left) || 0) + disX, (parseInt(params.top) || 0) + disY);
         }
